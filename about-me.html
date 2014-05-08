@@ -15,9 +15,10 @@
   <meta name="description" content="Posts and writings by Susheng">
 
 
+<meta name="keywords" content="About">
 
   <title>
-Archives  </title>
+About me  </title>
 
 </head>
 
@@ -39,23 +40,47 @@ Archives  </title>
 
   <main>
     <header>
-      <p>
-      <a href="">Index</a> &#124; <a href="/archives.html">Archives</a>
-      </p>
+<p>Posted on Thu 08 May 2014</p>
     </header>
 
 <article>
-  <div class="article_text">
-    <dl>
-      <dt>Thu 08 May 2014</dt>
-      <dd><a href="/about-me.html">About me</a></dd>
-      <dt>Thu 08 May 2014</dt>
-      <dd><a href="/first-post.html">First post</a></dd>
-    </dl>
+  <div class="article_title">
+    <h3><a href="/about-me.html">About me</a></h3>
   </div>
+  <div class="article_text">
+    <p><a href="http://weibo.com/u/1852253012">Weibo</a>
+<a href="https://www.linkedin.com/pub/susheng-shi/7a/1a5/bbb">LinkedIn</a></p>
+  </div>
+  <div class="article_meta">
+    <p>Category: <a href="/category/sss.html">SSS</a></p>
+    <p>Tags:
+      <a href="/tag/about.html">About</a>    </p>
+    <p>Comments: <a href="#" onclick="javascript:toggleComments();return false;">toggle</a></p>
+  </div>
+
+    <div id="article_comments" style="display:block">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+           var disqus_identifier = "about-me.html";
+           (function() {
+           var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+           dsq.src = 'http://susheng.disqus.com/embed.js';
+           (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+    </div>
+
 </article>
 
     <footer>
+<p><a href="/" class="button_accent">&larr; Back to Index</a></p>
+<script language="javascript">
+    function toggleComments() {
+        var commentDiv = document.getElementById("article_comments");
+        (commentDiv.style.display == "none") ? commentDiv.style.display = "block" : commentDiv.style.display = "none";
+        return false;
+    }
+</script>
     </footer>
 
     <div id="ending_message">
