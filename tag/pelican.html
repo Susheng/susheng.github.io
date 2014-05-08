@@ -1,196 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-        <meta charset="utf-8" />
-        <title>Susheng - pelican</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
+  <head>
+    <meta charset="utf-8">
+    <title>Susheng - pelican</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Susheng">
 
-        <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-</head>
+    <!-- Le styles -->
+    <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css" />
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+      .tag-1 {
+        font-size: 13pt;
+      }
+      .tag-2 {
+        font-size: 10pt;
+      }
+      .tag-2 {
+        font-size: 8pt;
+      }
+      .tag-4 {
+        font-size: 6pt;
+     }
+    </style>
+    <link href="/theme/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="/theme/css/font-awesome.css" rel="stylesheet">
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">Susheng </a></h1>
-                <nav><ul>
-                    <li><a href="/category/python.html">Python</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
+    <link href="/theme/css/pygments.css" rel="stylesheet">
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/my-super-post.html">My super title</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2014-05-07T10:20:00">
-                Wed 07 May 2014
-        </abbr>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-        <address class="vcard author">
-                By <a class="url fn" href="/author/susheng.html">Susheng</a>
-        </address>
-<p>In <a href="/category/python.html">Python</a>. </p>
-<p>tags: <a href="/tag/pelican.html">pelican</a><a href="/tag/publishing.html">publishing</a></p>
-</footer><!-- /.post-info --><p>This is the content of my super blog post.
-An h1 header
-============</p>
-<p>Paragraphs are separated by sdfsdfsdfsdfa blank line.</p>
-<p>2nd paragraph. <em>Italic</em>, <strong>bold</strong>, <code>monospace</code>. Itemized lists
-look like:</p>
-<ul>
-<li>this one</li>
-<li>that one</li>
-<li>the other one</li>
-</ul>
-<p>Note that --- not considering the asterisk --- the actual text
-content starts at 4-columns in.</p>
-<blockquote>
-<p>Block quotes are
-written like so.</p>
-<p>They can span multiple paragraphs,
-if you like.</p>
-</blockquote>
-<p>Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex. "it's all in
-chapters 12--14"). Three dots ... will be converted to an ellipsis.</p>
-<h2>An h2 header</h2>
-<p>Here's a numbered list:</p>
-<ol>
-<li>first item</li>
-<li>second item</li>
-<li>third item</li>
-</ol>
-<p>Note again how the actual text starts at 4 columns in (4 characters
-from the left side). Here's a code sample:</p>
-<div class="highlight"><pre><span class="cp"># Let me re-iterate ...</span>
-<span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="mi">1</span> <span class="p">..</span> <span class="mi">10</span> <span class="p">{</span> <span class="k">do</span><span class="o">-</span><span class="n">something</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="p">}</span>
-</pre></div>
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/theme/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png">
 
+    <link href="/" type="application/atom+xml" rel="alternate" title="Susheng ATOM Feed" />
 
-<p>As you probably guessed, indented 4 spaces. By the way, instead of
-indenting the block, you can use delimited blocks, if you like:</p>
-<div class="highlight"><pre><span class="n">define</span> <span class="nf">foobar</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">print</span> <span class="s">&quot;Welcome to flavor country!&quot;</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+  </head>
 
+  <body>
 
-<p>(which makes copying &amp; pasting easier). You can optionally mark the
-delimited block for Pandoc to syntax highlight it:</p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">time</span>
-<span class="c"># Quick, count to ten!</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="c"># (but not *too* quick)</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-    <span class="k">print</span> <span class="n">i</span>
-</pre></div>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/index.html">Susheng </a>
+          <div class="nav-collapse">
+            <ul class="nav">
+                          <li class="divider-vertical"></li>
+                  <li >
+                    <a href="/category/python.html">
+						<i class="icon-folder-open icon-large"></i>Python
+					</a>
+                  </li>
+
+                          <ul class="nav pull-right">
+                                <li><a href="/archives.html"><i class="icon-th-list"></i>Archives</a></li>
+                          </ul>
+
+            </ul>
+            <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>-->
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="span9" id="content">
+        <div class="article">
+                <h1><a href="/my-super-post.html">My super title</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2014-05-07T10:20:00">
+        <i class="icon-calendar"></i>Wed 07 May 2014
+</abbr>
+<span class="label">By</span>
+<a href="/author/susheng.html"><i class="icon-user"></i>Susheng</a>
+<span class="label">Category</span>
+<a href="/category/python.html"><i class="icon-folder-open"></i>Python</a>.
 
 
-<h3>An h3 header</h3>
-<p>Now a nested list:</p>
-<ol>
+<span class="label">Tags</span>
+	<a href="/tag/pelican.html"><i class="icon-tag"></i>pelican</a>
+	<a href="/tag/publishing.html"><i class="icon-tag"></i>publishing</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary"><p>Short version for index and feeds</p>
+                        <a class="btn primary xsmall" href="/my-super-post.html">more ...</a>
+                </div>
+        </div>
+        <hr />
+
+        </div><!--/span-->
+
+                <div class="span3 well sidebar-nav" id="sidebar">
+<ul class="nav nav-list">
+<li class="nav-header"><h4><i class="icon-external-link"></i>blogroll</h4></li>
+    <li><a href="http://getpelican.com/"><i class="icon-external-link"></i>Pelican</a></li>
+    <li><a href="http://python.org/"><i class="icon-external-link"></i>Python.org</a></li>
+    <li><a href="http://jinja.pocoo.org/"><i class="icon-external-link"></i>Jinja2</a></li>
+    <li><a href="#"><i class="icon-external-link"></i>You can modify those links in your config file</a></li>
+<li class="nav-header"><h4><i class="icon-home icon-large"></i> social</h4></li>
+<li><a href="/" rel="alternate"><i class="icon-bookmark icon-large"></i>atom feed</a></li>
+    <li><a href="#"><i class="icon-You can add links in your config file-sign icon-large"></i>You can add links in your config file</a></li>
+    <li><a href="#"><i class="icon-Another social link-sign icon-large"></i>Another social link</a></li>
+
+<li class="nav-header"><h4><i class="icon-folder-close icon-large"></i>Categories</h4></li>
 <li>
-<p>First, get these ingredients:</p>
-<ul>
-<li>carrots</li>
-<li>celery</li>
-<li>lentils</li>
-</ul>
+<a href="/category/python.html">
+    <i class="icon-folder-open icon-large"></i>Python
+</a>
 </li>
-<li>
-<p>Boil some water.</p>
+
+<li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
+<li class="tag-4">
+    <a href="/tag/publishing.html">
+        <i class="icon-tag icon-large"></i>publishing
+    </a>
 </li>
-<li>
-<p>Dump everything in the pot and follow
-    this algorithm:</p>
-<div class="highlight"><pre><span class="n">find</span> <span class="n">wooden</span> <span class="n">spoon</span>
-<span class="n">uncover</span> <span class="n">pot</span>
-<span class="n">stir</span>
-<span class="n">cover</span> <span class="n">pot</span>
-<span class="n">balance</span> <span class="n">wooden</span> <span class="n">spoon</span> <span class="n">precariously</span> <span class="n">on</span> <span class="n">pot</span> <span class="n">handle</span>
-<span class="n">wait</span> <span class="mi">10</span> <span class="n">minutes</span>
-<span class="k">goto</span> <span class="n">first</span> <span class="n">step</span> <span class="p">(</span><span class="n">or</span> <span class="n">shut</span> <span class="n">off</span> <span class="n">burner</span> <span class="n">when</span> <span class="n">done</span><span class="p">)</span>
-</pre></div>
-
-
-<p>Do not bump wooden spoon or it will fall.</p>
+<li class="tag-4">
+    <a href="/tag/pelican.html">
+        <i class="icon-tag icon-large"></i>pelican
+    </a>
 </li>
-</ol>
-<p>Notice again how text always lines up on 4-space indents (including
-that last line which continues item 3 above). Here's a link to <a href="http://foo.bar">a
-website</a>. Here's a link to a <a href="local-doc.html">local
-doc</a>. Here's a footnote <sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>.</p>
-<p>Tables can look like this:</p>
-<p>size  material      color</p>
-<hr />
-<p>9     leather       brown
-10    hemp canvas   natural
-11    glass         transparent</p>
-<p>Table: Shoes, their sizes, and what they're made of</p>
-<p>(The above is the caption for the table.) Here's a definition list:</p>
-<dl>
-<dt>apples</dt>
-<dd>
-<dl>
-<dt>Good for making applesauce.</dt>
-<dt>oranges</dt>
-<dd>
-<dl>
-<dt>Citrus!</dt>
-<dt>tomatoes</dt>
-<dd>There's no "e" in tomatoe.</dd>
-</dl>
-</dd>
-</dl>
-</dd>
-</dl>
-<p>Again, text is indented 4 spaces. (Alternately, put blank lines in
-between each of the above definition list lines to spread things
-out more.)</p>
-<p>Inline math equations go in like so: $\omega = d\phi / dt$. Display
-math should get its own line and be put in in double-dollarsigns:</p>
-<p>$$I = \int \rho R^{2} dV$$</p>
-<p>Done.</p>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p>Footnote text goes here.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>                </article>
-<p class="paginator">
-    Page 1 / 1
-</p>
-            </aside><!-- /#featured -->
-            </ol><!-- /#posts-list -->
-            </section><!-- /#content -->
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>blogroll</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
 
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
+</ul>        </div><!--/.well -->
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+      </div><!--/row-->
 
-</body>
+      <hr>
+
+      <footer>
+        <address id="about">
+                Proudly powered by <a href="http://pelican.notmyidea.org/">Pelican <i class="icon-external-link"></i></a>,
+                                which takes great advantage of <a href="http://python.org">Python <i class="icon-external-link"></i></a>.
+        </address><!-- /#about -->
+
+        <p>The theme is from <a href="http://twitter.github.com/bootstrap/">Bootstrap from Twitter <i class="icon-external-link"></i></a>,
+                   and <a href="http://fortawesome.github.com/Font-Awesome/">Font-Awesome <i class="icon-external-link"></i></a>, thanks!</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+
+
+    <!-- Le javascript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/theme/js/jquery-1.7.2.min.js"></script>
+    <script src="/theme/js/bootstrap.min.js"></script>
+  </body>
 </html>
