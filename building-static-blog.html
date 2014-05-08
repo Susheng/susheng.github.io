@@ -55,13 +55,15 @@ Building Static Blog  </title>
 <a href="http://blog.xlarrakoetxea.org/posts/2012/10/creating-a-blog-with-pelican/">English</a></p>
 <h1>Theme</h1>
 <p>There are quite a lot of themes for options, however I really like this one. <a href="https://github.com/giulivo/pelican-svbhack"><strong>pelican-svbhack</strong></a> is a very neat theme for Pelican. However, one big annoying thing is that it opens a new tab or window for links on the left side. I don't know why the author does this, but according to this article <a href="http://www.problogdesign.com/blog-usability/new-window-for-a-new-link/">"New Window for a New Link?"</a>, please give the right back to the user. So simply edit two lines in <strong>pelican-svbhack/templates/base.html</strong>.</p>
-<p><code>html
-        {% for name, link in LINKS %}
-        &lt;li&gt;&lt;a href="{{ link }}"&gt;{{ name }}&lt;/a&gt;&lt;/li&gt;
+<div class="highlight"><pre>        {% for name, link in LINKS %}
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ link }}&quot;</span><span class="nt">&gt;</span>{{ name }}<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
         {% endfor %}
         {% for name, link in SOCIAL %}
-        &lt;li&gt;&lt;a href="{{ link }}"&gt;{{ name }}&lt;/a&gt;&lt;/li&gt;
-        {% endfor %}</code></p>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ link }}&quot;</span><span class="nt">&gt;</span>{{ name }}<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        {% endfor %}
+</pre></div>
+
+
 <h1>GitHub</h1>
 <div class="highlight"><pre><span class="err">进入</span><span class="n">output</span><span class="err">把自己刚刚建好的</span><span class="n">username</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="err">版本库</span><span class="n">clone</span><span class="err">下来：</span>
 <span class="n">cd</span> <span class="n">output</span>
