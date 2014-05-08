@@ -48,37 +48,132 @@ Building Static Blog  </title>
     <h3><a href="./building-static-blog.html">Building Static Blog</a></h3>
   </div>
   <div class="article_text">
-    <p>In this my first post, let me go through how to build a static Blog using <a href="https://github.com/getpelican/pelican"><strong>Pelican</strong></a> + <a href="https://github.com/"><strong>Github</strong></a> like this.</p>
-<h1>Why writing this?</h1>
-<p>There are plenty of tutorials on building up static blog, but most of them contain some errors or miss some very important tips.</p>
-<p><a href="http://www.lizherui.com/pages/2013/08/17/build_blog.html">Chinese</a>
-<a href="http://blog.xlarrakoetxea.org/posts/2012/10/creating-a-blog-with-pelican/">English</a></p>
-<h1>Theme</h1>
-<p>There are quite a lot of themes for options, however I really like this one. <a href="https://github.com/giulivo/pelican-svbhack"><strong>pelican-svbhack</strong></a> is a very neat theme for Pelican. However, one big annoying thing is that it opens a new tab or window for links on the left side. I don't know why the author does this, but according to this article <a href="http://www.problogdesign.com/blog-usability/new-window-for-a-new-link/">"New Window for a New Link?"</a>, please give the right back to the user. So simply edit two lines in <strong>pelican-svbhack/templates/base.html</strong>.</p>
-<div class="highlight"><pre>        {% for name, link in LINKS %}
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ link }}&quot;</span><span class="nt">&gt;</span>{{ name }}<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        {% endfor %}
-        {% for name, link in SOCIAL %}
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ link }}&quot;</span><span class="nt">&gt;</span>{{ name }}<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        {% endfor %}
+    <h2>In this my first post, let me go through how to build a static Blog using Pelican(https://github.com/getpelican/pelican) + Github like this.</h2>
+<p>Paragraphs are separated by sdfsdfsdfsdfa blank line.</p>
+<p>2nd paragraph. <em>Italic</em>, <strong>bold</strong>, <code>monospace</code>. Itemized lists
+look like:</p>
+<ul>
+<li>this one</li>
+<li>that one</li>
+<li>the other one</li>
+</ul>
+<p>Note that --- not considering the asterisk --- the actual text
+content starts at 4-columns in.</p>
+<blockquote>
+<p>Block quotes are
+written like so.</p>
+<p>They can span multiple paragraphs,
+if you like.</p>
+</blockquote>
+<p>Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex. "it's all in
+chapters 12--14"). Three dots ... will be converted to an ellipsis.</p>
+<h2>An h2 header</h2>
+<p>Here's a numbered list:</p>
+<ol>
+<li>first item</li>
+<li>second item</li>
+<li>third item</li>
+</ol>
+<p>Note again how the actual text starts at 4 columns in (4 characters
+from the left side). Here's a code sample:</p>
+<div class="highlight"><pre><span class="cp"># Let me re-iterate ...</span>
+<span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="mi">1</span> <span class="p">..</span> <span class="mi">10</span> <span class="p">{</span> <span class="k">do</span><span class="o">-</span><span class="n">something</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="p">}</span>
 </pre></div>
 
 
-<h1>GitHub</h1>
-<div class="highlight"><pre><span class="err">进入</span><span class="n">output</span><span class="err">把自己刚刚建好的</span><span class="n">username</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="err">版本库</span><span class="n">clone</span><span class="err">下来：</span>
-<span class="n">cd</span> <span class="n">output</span>
-<span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="err">@</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">:</span><span class="n">username</span><span class="o">/</span><span class="n">username</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">git</span>
+<p>As you probably guessed, indented 4 spaces. By the way, instead of
+indenting the block, you can use delimited blocks, if you like:</p>
+<div class="highlight"><pre><span class="n">define</span> <span class="nf">foobar</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">print</span> <span class="s">&quot;Welcome to flavor country!&quot;</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 
 
-<p>This is not corret, which will create a new directory in your <strong>output</strong> folder. And when you run <strong>make html</strong>, the git repository will be cleared. The correct way is:</p>
-<div class="highlight"><pre><span class="n">git</span> <span class="n">init</span>
-<span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">YourGitRepo</span>
-<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">master</span>
+<p>(which makes copying &amp; pasting easier). You can optionally mark the
+delimited block for Pandoc to syntax highlight it:</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">time</span>
+<span class="c"># Quick, count to ten!</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="c"># (but not *too* quick)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+    <span class="k">print</span> <span class="n">i</span>
 </pre></div>
 
 
-<p>Of course, the assumption is that your SSH is set correctly.</p>
+<p><img alt="alt text" src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo Title Text 1" /></p>
+<h3>An h3 header</h3>
+<p>Now a nested list:</p>
+<ol>
+<li>
+<p>First, get these ingredients:</p>
+<ul>
+<li>carrots</li>
+<li>celery</li>
+<li>lentils</li>
+</ul>
+</li>
+<li>
+<p>Boil some water.</p>
+</li>
+<li>
+<p>Dump everything in the pot and follow
+    this algorithm:</p>
+<div class="highlight"><pre><span class="n">find</span> <span class="n">wooden</span> <span class="n">spoon</span>
+<span class="n">uncover</span> <span class="n">pot</span>
+<span class="n">stir</span>
+<span class="n">cover</span> <span class="n">pot</span>
+<span class="n">balance</span> <span class="n">wooden</span> <span class="n">spoon</span> <span class="n">precariously</span> <span class="n">on</span> <span class="n">pot</span> <span class="n">handle</span>
+<span class="n">wait</span> <span class="mi">10</span> <span class="n">minutes</span>
+<span class="k">goto</span> <span class="n">first</span> <span class="n">step</span> <span class="p">(</span><span class="n">or</span> <span class="n">shut</span> <span class="n">off</span> <span class="n">burner</span> <span class="n">when</span> <span class="n">done</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Do not bump wooden spoon or it will fall.</p>
+</li>
+</ol>
+<p>Notice again how text always lines up on 4-space indents (including
+that last line which continues item 3 above). Here's a link to <a href="http://foo.bar">a
+website</a>. Here's a link to a <a href="local-doc.html">local
+doc</a>. Here's a footnote <sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>.</p>
+<p>Tables can look like this:</p>
+<p>size  material      color</p>
+<hr />
+<p>9     leather       brown
+10    hemp canvas   natural
+11    glass         transparent</p>
+<p>Table: Shoes, their sizes, and what they're made of</p>
+<p>(The above is the caption for the table.) Here's a definition list:</p>
+<dl>
+<dt>apples</dt>
+<dd>
+<dl>
+<dt>Good for making applesauce.</dt>
+<dt>oranges</dt>
+<dd>
+<dl>
+<dt>Citrus!</dt>
+<dt>tomatoes</dt>
+<dd>There's no "e" in tomatoe.</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>Again, text is indented 4 spaces. (Alternately, put blank lines in
+between each of the above definition list lines to spread things
+out more.)</p>
+<p>Inline math equations go in like so: $\omega = d\phi / dt$. Display
+math should get its own line and be put in in double-dollarsigns:</p>
+<p>$$I = \int \rho R^{2} dV$$</p>
+<p>Done.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Footnote text goes here.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
   </div>
   <div class="article_meta">
     <p>Category: <a href="./category/blog.html">Blog</a></p>
