@@ -54,7 +54,7 @@ Building Static Blog  </title>
 <p><a href="http://www.lizherui.com/pages/2013/08/17/build_blog.html">Chinese</a>
 <a href="http://blog.xlarrakoetxea.org/posts/2012/10/creating-a-blog-with-pelican/">English</a></p>
 <h1>Theme</h1>
-<p>There are quite a lot of themes for options, however I really like this one. <a href="https://github.com/giulivo/pelican-svbhack"><strong>pelican-svbhack</strong></a> is a very neat theme for Pelican. However, one big annoying thing is that it opens a new tab or window for links on the left side. I don't know why the author does this, but according to this article <a href="http://www.problogdesign.com/blog-usability/new-window-for-a-new-link/">"New Window for a New Link?"</a>, please give the right back to the user. So simply edit two lines in <strong>pelican-svbhack/templates/base.html</strong> ---- ~~target="_blank"~~.</p>
+<p>There are quite a lot of themes for options, however I really like this one. <a href="https://github.com/giulivo/pelican-svbhack"><strong>pelican-svbhack</strong></a> is a very neat theme for Pelican. However, one big annoying thing is that it opens a new tab or window for links on the left side. I don't know why the author does this, but according to this article <a href="http://www.problogdesign.com/blog-usability/new-window-for-a-new-link/">"New Window for a New Link?"</a>, please give the right back to the user. So simply edit two lines in <strong>pelican-svbhack/templates/base.html</strong>.</p>
 <div class="highlight"><pre>        {% for name, link in LINKS %}
         <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ link }}&quot;</span><span class="nt">&gt;</span>{{ name }}<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
         {% endfor %}
