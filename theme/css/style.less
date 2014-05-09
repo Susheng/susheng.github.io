@@ -1,23 +1,30 @@
 @red:  #ff0000;
 @black:  #000000;
 @white:  #ffffff;
-@light-grey:  #eeeeee;
+@light-grey:  #F8F8F8;
 @med-grey:  #999999;
 @dark-grey:  #4d4d4d;
+@border-grey: #DDDDDD;
 @blue:  #0e94ec;
 @accent:  @blue;
-@sans: 'PT Sans', sans-serif;
+@sans: Helvetica, arial, freesans, clean, sans-serif;
 @serif: 'PT Serif', serif;
-@mono: 'PT Mono', monospace;
+@mono: Consolas, "Liberation Mono", Courier, monospace;
 
 body {
   margin: 0;
   padding: 0;
   background-color: @white;
-  color: @dark-grey;
+  color: @black;
   font-family: @sans;
   font-size: 18px;
 }
+
+h1 {
+    font-size:40px;
+    border-bottom: 1px solid @border-grey}
+
+h2 {font-size:33px;}
 
 a {
   color: @black;
@@ -63,7 +70,7 @@ aside {
 
         a {
           padding: 5px 15px 5px 15px;
-          border: 3px solid @light-grey;
+          border: 3px solid @border-grey;
           .border-radius(15px);
           color: @med-grey;
         }
@@ -74,20 +81,25 @@ aside {
 
 main {
   header {
-    padding: 40px;
-    border-top: @light-grey 1px solid;
-    border-bottom: @light-grey 1px solid;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: @border-grey 1px solid;
+    border-bottom: @border-grey 1px solid;
 
     p {
       font-weight: bold;
-      font-size: 10px;
+      font-size: 15px;
       text-transform: uppercase;
     }
   }
 
   article {
     max-width: 640px;
-    padding: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 40px;
 
     div.article_title {
     }
@@ -105,6 +117,7 @@ main {
         font-size: 14px;
         font-family: @mono;
         background: @light-grey;
+        line-height: 19px;
       }
 
       pre {
@@ -117,6 +130,7 @@ main {
         background: @light-grey;
         line-height: 1.125em;
         overflow-x: auto;
+        line-height: 19px;
       }
 
       blockquote {
@@ -138,8 +152,8 @@ main {
   }
 
   footer {
-    border-top: @light-grey 1px solid;
-    border-bottom: @light-grey 1px solid;
+    border-top: @border-grey 1px solid;
+    border-bottom: @border-grey 1px solid;
     padding: 40px;
 
     a.button_accent {
@@ -177,7 +191,7 @@ main {
     position: fixed;
     top: 0;
     left: 0;
-    border-right: @light-grey 1px solid;
+    border-right: @border-grey 1px solid;
 
     h2 {
       margin: 10px 0 0 0;
@@ -204,7 +218,7 @@ main {
     overflow-y: hidden;
 
     article {
-      max-width: 640px;
+      max-width: 1280px;
     }
 
     header {
